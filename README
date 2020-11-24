@@ -1,0 +1,16 @@
+EliteGL - An OpenGL Port of Christian Pinder's "Elite: The New Kind"
+By Mark Follett <mef123@geocities.com>
+Version 1.0.0
+
+This port requires you to have the SDL and SDL_mixer libraries installed.
+For optional Mp3 support (C-64 music), you need SMPEG.
+
+SDL, SDL_mixer, and SMPEG can all be downloaded from www.libsdl.org.
+
+To build,  run
+	./configure
+	make
+
+Then copy the compiled elitegl binary from ./src to the elitegl data directory
+to run it.
+
