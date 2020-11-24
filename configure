@@ -1,7 +1,7 @@
-#! /bin/sh
+#!/bin/sh
 
 # Guess values for system-dependent variables and create Makefiles.
-# Generated automatically using autoconf version 2.13 
+# Generated automatically using autoconf version 2.13
 # Copyright (C) 1992, 93, 94, 95, 96 Free Software Foundation, Inc.
 #
 # This configure script is free software; the Free Software Foundation
@@ -26,13 +26,13 @@ ac_help="$ac_help
 ac_help="$ac_help
   --disable-smpeg           Disable detection and use of SMPEG"
 ac_help="$ac_help
-  --with-smpeg-prefix=PFX   Prefix where SMPEG is 
+  --with-smpeg-prefix=PFX   Prefix where SMPEG is
 installed (optional)"
 ac_help="$ac_help
-  --with-smpeg-exec-prefix=PFX Exec prefix 
+  --with-smpeg-exec-prefix=PFX Exec prefix
 where SMPEG is installed (optional)"
 ac_help="$ac_help
-  --disable-smpegtest       Do not try to compile 
+  --disable-smpegtest       Do not try to compile
 and run a test SMPEG program"
 ac_help="$ac_help
   --with-gl-libs=DIR      GL/MesaGL library location"
@@ -1412,7 +1412,7 @@ echo "$ac_t""$CPP" 1>&6
 cat > conftest.$ac_ext <<EOF
 #line 1414 "configure"
 #include "confdefs.h"
- 
+
 #if defined(WIN32) || defined(__CYGWIN__)
   yes
 #endif
@@ -1424,7 +1424,7 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
   is_win32=yes
 else
   rm -rf conftest*
-  is_win32=no 
+  is_win32=no
 fi
 rm -f conftest*
 
@@ -1486,13 +1486,13 @@ else
   /*)
   ac_cv_path_SDL_CONFIG="$SDL_CONFIG" # Let the user override the test with a path.
   ;;
-  ?:/*)			 
+  ?:/*)
   ac_cv_path_SDL_CONFIG="$SDL_CONFIG" # Let the user override the test with a dos path.
   ;;
   *)
   IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
   ac_dummy="$PATH"
-  for ac_dir in $ac_dummy; do 
+  for ac_dir in $ac_dummy; do
     test -z "$ac_dir" && ac_dir=.
     if test -f $ac_dir/$ac_word; then
       ac_cv_path_SDL_CONFIG="$ac_dir/$ac_word"
@@ -1549,7 +1549,7 @@ char*
 my_strdup (char *str)
 {
   char *new_str;
-  
+
   if (str)
     {
       new_str = (char *)malloc ((strlen (str) + 1) * sizeof(char));
@@ -1557,7 +1557,7 @@ my_strdup (char *str)
     }
   else
     new_str = NULL;
-  
+
   return new_str;
 }
 
@@ -1616,7 +1616,7 @@ fi
   fi
   if test "x$no_sdl" = x ; then
      echo "$ac_t""yes" 1>&6
-     have_SDL=yes     
+     have_SDL=yes
   else
      echo "$ac_t""no" 1>&6
      if test "$SDL_CONFIG" = "no" ; then
@@ -1644,7 +1644,7 @@ int main(int argc, char *argv[])
 #define main K_and_R_C_main
 
 int main() {
- return 0; 
+ return 0;
 ; return 0; }
 EOF
 if { (eval echo configure:1651: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
@@ -1665,7 +1665,7 @@ else
    echo "*** The test program failed to compile or link. See the file config.log for the"
           echo "*** exact error that occured. This usually means SDL was incorrectly installed"
           echo "*** or that you have moved SDL since it was installed. In the latter case, you"
-          echo "*** may want to edit the sdl-config script: $SDL_CONFIG" 
+          echo "*** may want to edit the sdl-config script: $SDL_CONFIG"
 fi
 rm -f conftest*
           CFLAGS="$ac_save_CFLAGS"
@@ -1676,8 +1676,8 @@ rm -f conftest*
      SDL_LIBS=""
      have_SDL=no
   fi
-  
-  
+
+
   rm -f conf.sdltest
 
 
@@ -1730,12 +1730,12 @@ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
   have_SDL_mixer=yes
 else
   echo "$ac_t""no" 1>&6
-have_SDL_mixer=no 
+have_SDL_mixer=no
 fi
 
 
-	if test "x$have_SDL_mixer" = "xyes" ; then 
-	    ELITE_CPPFLAGS="$ELITE_CPPFLAGS -DHAVE_SDL_MIXER=1" 
+	if test "x$have_SDL_mixer" = "xyes" ; then
+	    ELITE_CPPFLAGS="$ELITE_CPPFLAGS -DHAVE_SDL_MIXER=1"
 	    ELITE_LIBS="$ELITE_LIBS -lSDL_mixer"
 	else
 	    echo "*** SDL_mixer not found.  Can't build this program without it!"
@@ -1806,13 +1806,13 @@ else
   /*)
   ac_cv_path_SMPEG_CONFIG="$SMPEG_CONFIG" # Let the user override the test with a path.
   ;;
-  ?:/*)			 
+  ?:/*)
   ac_cv_path_SMPEG_CONFIG="$SMPEG_CONFIG" # Let the user override the test with a dos path.
   ;;
   *)
   IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
   ac_dummy="$PATH"
-  for ac_dir in $ac_dummy; do 
+  for ac_dir in $ac_dummy; do
     test -z "$ac_dir" && ac_dir=.
     if test -f $ac_dir/$ac_word; then
       ac_cv_path_SMPEG_CONFIG="$ac_dir/$ac_word"
@@ -1900,22 +1900,22 @@ int main (int argc, char *argv[])
 
    if (($smpeg_major_version > major) ||
       (($smpeg_major_version == major) && ($smpeg_minor_version > minor)) ||
-      (($smpeg_major_version == major) && ($smpeg_minor_version == minor) 
+      (($smpeg_major_version == major) && ($smpeg_minor_version == minor)
 && ($smpeg_micro_version >= micro)))
     {
       return 0;
     }
   else
     {
-      printf("\n*** 'smpeg-config --version' returned %d.%d.%d, but the 
-minimum version\n", $smpeg_major_version, $smpeg_minor_version, 
+      printf("\n*** 'smpeg-config --version' returned %d.%d.%d, but the
+minimum version\n", $smpeg_major_version, $smpeg_minor_version,
 $smpeg_micro_version);
-      printf("*** of SMPEG required is %d.%d.%d. If smpeg-config is 
+      printf("*** of SMPEG required is %d.%d.%d. If smpeg-config is
 correct, then it is\n", major, minor, micro);
       printf("*** best to upgrade to the required version.\n");
-      printf("*** If smpeg-config was wrong, set the environment variable 
+      printf("*** If smpeg-config was wrong, set the environment variable
 SMPEG_CONFIG\n");
-      printf("*** to point to the correct copy of smpeg-config, and remove 
+      printf("*** to point to the correct copy of smpeg-config, and remove
 the file\n");
       printf("*** config.cache before re-running configure\n");
       return 1;
@@ -1946,11 +1946,11 @@ fi
   else
      echo "$ac_t""no" 1>&6
      if test "$SMPEG_CONFIG" = "no" ; then
-       echo "*** The smpeg-config script installed by SMPEG could not be 
+       echo "*** The smpeg-config script installed by SMPEG could not be
 found"
-       echo "*** If SMPEG was installed in PREFIX, make sure PREFIX/bin is 
+       echo "*** If SMPEG was installed in PREFIX, make sure PREFIX/bin is
 in"
-       echo "*** your path, or set the SMPEG_CONFIG environment variable to 
+       echo "*** your path, or set the SMPEG_CONFIG environment variable to
 the"
        echo "*** full path to smpeg-config."
      else
@@ -1968,39 +1968,39 @@ the"
 #include "smpeg.h"
 
 int main() {
- return 0; 
+ return 0;
 ; return 0; }
 EOF
 if { (eval echo configure:1975: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
   rm -rf conftest*
-   echo "*** The test program compiled, but did not run. This 
+   echo "*** The test program compiled, but did not run. This
 usually means"
-          echo "*** that the run-time linker is not finding SMPEG or 
+          echo "*** that the run-time linker is not finding SMPEG or
 finding the wrong"
-          echo "*** version of SMPEG. If it is not finding SMPEG, you'll 
+          echo "*** version of SMPEG. If it is not finding SMPEG, you'll
 need to set your"
-          echo "*** LD_LIBRARY_PATH environment variable, or edit 
+          echo "*** LD_LIBRARY_PATH environment variable, or edit
 /etc/ld.so.conf to point"
-          echo "*** to the installed location  Also, make sure you have run 
+          echo "*** to the installed location  Also, make sure you have run
 ldconfig if that"
           echo "*** is required on your system"
           echo "***"
-          echo "*** If you have an old version installed, it is best to 
+          echo "*** If you have an old version installed, it is best to
 remove it, although"
-          echo "*** you may also be able to get things to work by modifying 
+          echo "*** you may also be able to get things to work by modifying
 LD_LIBRARY_PATH"
 else
   echo "configure: failed program was:" >&5
   cat conftest.$ac_ext >&5
   rm -rf conftest*
-   echo "*** The test program failed to compile or link. See the 
+   echo "*** The test program failed to compile or link. See the
 file config.log for the"
-          echo "*** exact error that occured. This usually means SMPEG was 
+          echo "*** exact error that occured. This usually means SMPEG was
 incorrectly installed"
-          echo "*** or that you have moved SMPEG since it was installed. In 
+          echo "*** or that you have moved SMPEG since it was installed. In
 the latter case, you"
-          echo "*** may want to edit the smpeg-config script: 
-$SMPEG_CONFIG" 
+          echo "*** may want to edit the smpeg-config script:
+$SMPEG_CONFIG"
 fi
 rm -f conftest*
           CFLAGS="$ac_save_CFLAGS"
@@ -2011,8 +2011,8 @@ rm -f conftest*
      SMPEG_LIBS=""
      have_SMPEG=no
   fi
-  
-  
+
+
   rm -f conf.smpegtest
 
 
@@ -2059,7 +2059,7 @@ saved_LIBS="$LIBS"
         GL_LIB_NAME="$with_gl_lib_name"
     fi
 
-    
+
     echo $ac_n "checking for $GL_LIB_NAME library""... $ac_c" 1>&6
 echo "configure:2065: checking for $GL_LIB_NAME library" >&5
     LIBS="$saved_LIBS $ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME"
@@ -2087,7 +2087,7 @@ rm -f conftest*
 	ELITE_LIBS="$ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME"
 
     else
-	
+
 	echo $ac_n "checking for $GL_LIB_NAME library (with pthreads)""... $ac_c" 1>&6
 echo "configure:2093: checking for $GL_LIB_NAME library (with pthreads)" >&5
 	LIBS="$saved_LIBS $ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME -lpthread"
@@ -2126,7 +2126,7 @@ EOF
 `
 
         for GL_LIB_NAME in $GL_LIB_LIST ; do
-            
+
     echo $ac_n "checking for $GL_LIB_NAME library""... $ac_c" 1>&6
 echo "configure:2132: checking for $GL_LIB_NAME library" >&5
     LIBS="$saved_LIBS $ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME"
@@ -2154,7 +2154,7 @@ rm -f conftest*
 	ELITE_LIBS="$ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME"
 
     else
-	
+
 	echo $ac_n "checking for $GL_LIB_NAME library (with pthreads)""... $ac_c" 1>&6
 echo "configure:2160: checking for $GL_LIB_NAME library (with pthreads)" >&5
 	LIBS="$saved_LIBS $ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME -lpthread"
@@ -2196,14 +2196,14 @@ if test "x$have_GL" = "xno" -a "x$GL_LDOPTS" = "x" ; then
     echo "*** location (/usr/lib).  I'll check in /usr/X11R6/lib, since"
     echo "*** many distributions (incorrectly) put OpenGL libs there."
     GL_LDOPTS="-L/usr/X11R6/lib"
-    
+
     if test "x$with_gl_lib_name" = "x" ; then
         GL_LIB_NAME="GL"
     else
         GL_LIB_NAME="$with_gl_lib_name"
     fi
 
-    
+
     echo $ac_n "checking for $GL_LIB_NAME library""... $ac_c" 1>&6
 echo "configure:2209: checking for $GL_LIB_NAME library" >&5
     LIBS="$saved_LIBS $ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME"
@@ -2231,7 +2231,7 @@ rm -f conftest*
 	ELITE_LIBS="$ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME"
 
     else
-	
+
 	echo $ac_n "checking for $GL_LIB_NAME library (with pthreads)""... $ac_c" 1>&6
 echo "configure:2237: checking for $GL_LIB_NAME library (with pthreads)" >&5
 	LIBS="$saved_LIBS $ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME -lpthread"
@@ -2270,7 +2270,7 @@ EOF
 `
 
         for GL_LIB_NAME in $GL_LIB_LIST ; do
-            
+
     echo $ac_n "checking for $GL_LIB_NAME library""... $ac_c" 1>&6
 echo "configure:2276: checking for $GL_LIB_NAME library" >&5
     LIBS="$saved_LIBS $ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME"
@@ -2298,7 +2298,7 @@ rm -f conftest*
 	ELITE_LIBS="$ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME"
 
     else
-	
+
 	echo $ac_n "checking for $GL_LIB_NAME library (with pthreads)""... $ac_c" 1>&6
 echo "configure:2304: checking for $GL_LIB_NAME library (with pthreads)" >&5
 	LIBS="$saved_LIBS $ELITE_LIBS $GL_LDOPTS -l$GL_LIB_NAME -lpthread"
@@ -2355,7 +2355,7 @@ fi
 
 if test "x$with_gl_inc" = "x" ; then
     GL_CPPFLAGS=""
-else 
+else
     GL_CPPFLAGS="-I$with_gl_inc"
 fi
 
@@ -2371,7 +2371,7 @@ echo "configure:2371: checking for GL/gl.h" >&5
     cat > conftest.$ac_ext <<EOF
 #line 2373 "configure"
 #include "confdefs.h"
- #include <GL/gl.h> 
+ #include <GL/gl.h>
 EOF
 ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
 { (eval echo configure:2378: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
@@ -2384,7 +2384,7 @@ else
   echo "configure: failed program was:" >&5
   cat conftest.$ac_ext >&5
   rm -rf conftest*
-  have_gl_h=no 
+  have_gl_h=no
 fi
 rm -f conftest*
     echo "$ac_t""$have_gl_h" 1>&6
@@ -2395,7 +2395,7 @@ if test "x$have_gl_h" = "xno" -a "x$GL_CPPFLAGS" = "x" ; then
     echo "*** location (/usr/include).  I'll check in /usr/X11R6/include, since"
     echo "*** many distributions (incorrectly) put OpenGL headers there."
     GL_CPPFLAGS="-I/usr/X11R6/include"
-    
+
     CPPFLAGS="$saved_CPPFLAGS $GL_CPPFLAGS $ELITE_CPPFLAGS"
 
     echo $ac_n "checking for GL/gl.h""... $ac_c" 1>&6
@@ -2403,7 +2403,7 @@ echo "configure:2403: checking for GL/gl.h" >&5
     cat > conftest.$ac_ext <<EOF
 #line 2405 "configure"
 #include "confdefs.h"
- #include <GL/gl.h> 
+ #include <GL/gl.h>
 EOF
 ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
 { (eval echo configure:2410: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
@@ -2416,7 +2416,7 @@ else
   echo "configure: failed program was:" >&5
   cat conftest.$ac_ext >&5
   rm -rf conftest*
-  have_gl_h=no 
+  have_gl_h=no
 fi
 rm -f conftest*
     echo "$ac_t""$have_gl_h" 1>&6
@@ -2428,7 +2428,7 @@ if test "x$have_gl_h" = "xno" ; then
 fi
 
 
-CPPFLAGS="$saved_CPPFLAGS" 
+CPPFLAGS="$saved_CPPFLAGS"
 ELITE_CPPFLAGS="$ELITE_CPPFLAGS $GL_CPPFLAGS"
 
 
